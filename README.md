@@ -5,6 +5,7 @@ You can refer the projects by checking the link below:
 https://github.com/PacktPublishing/Django-3-by-Example/tree/master/Chapter14/educa/educa
 
 These are some of the install requirement
+```
 homebrew install postgresql
 pip install daphne
 pip install uwsgi
@@ -18,6 +19,8 @@ pip install WeasyPrint
 pip install channels-redis
 pip install psycopg2-binary
 pip install python-memcached
+```
+
 
 Before use the command python manage.py runserver, **remember to start**:
 1. If you want to use memcached, run the command below:
