@@ -1,0 +1,17 @@
+Run the rabbitmq:
+export PATH=$PATH:/usr/local/sbin
+rabbitmq-server
+
+Run the celery
+celery -A ShoppingBlog worker -l info
+
+Monitor the celery background process
+celery -A ShoppingBlog flower
+
+What did i install?
+pip:
+weasyprint
+cairo
+pango
+flower
+braintree

@@ -1,0 +1,84 @@
+The dumpdata command dumps data from the database into the standard output,  serialized in JSON format by default. 
+The resulting data structure includes information about the model and its fields for Django to be able to load it into the database.
+
+# Convert the database models into json format
+python manage.py dumpdata courses --indent=2
+python manage.py dumpdata courses --indent=2 --output=courses/fixtures/subjects.json
+
+# Load the models from the local json file
+python manage.py loaddata subjects.json
+
+Username: Instructor
+pwd: aakk1234
+
+# STUDENT
+Username: stu001
+pwd: 1234stud
+
+#Use the memcached
+memcached -l 127.0.0.1:11211
+
+Another superuser
+admin
+admin
+
+export DJANGO_SETTINGS_MODULE=educa.settings.pro
+
+sudo uwsgi --module=educa.wsgi:application \
+--env=DJANGO_SETTINGS_MODULE=educa.settings.pro \
+--master --pidfile=/tmp/project-master.pid \
+--http=127.0.0.1:8000 \
+--uid=1000 \
+--virtualenv=/Users/heavenluv/Desktop/Code/tryenv/ \
+--plugins=python39 
+
+
+Before run nginx, run this
+sudo nginx -c /usr/local/etc/nginx/nginx.conf
+sudo nginx -s reload
+sudo nginx -s stop/quit
+
+then for the permission problem
+navigate to the nginx.conf(default one)
+➜  ~ cd /usr/local/etc/nginx/          
+then vim nginx.conf
+
+change the below line:
+user nobody
+to:
+user your_username your_group(for mac normally is staff)
+
+How to run the uwsgi
+➜  educa sudo uwsgi --ini config/uwsgi.ini            
+
+To enable the chat room, pls remember:
+Run redis on shell:
+redis-server
+
+then
+export DJANGO_SETTINGS_MODULE=educa.settings.pro
+daphne -u /Users/heavenluv/Desktop/Code/tryenv/educa/daphne.sock educa.asgi:application
+
+How to configure the host file?
+➜  ~ sudo nano /private/etc/hosts
+
+
+Some important point:
+
+remember to configure the uwsgi.ini ---> uid = your_username gid= your_group
+
+
+install requirement
+homebrew install postgresql
+pip install daphne
+pip install uwsgi
+pip install memcache
+pip install django-memcache-status
+pip install requests
+pip install django-braces
+pip install django-embed-video
+pip install djangorestframework
+pip install WeasyPrint
+pip install channels-redis
+pip install psycopg2-binary
+pip install python-memcached
